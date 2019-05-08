@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GetMusic</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+	
+	<link href="css/getMusic.css" rel="stylesheet">
+
+	<!-- Google FONT - Barlow 400 regular, 400i reg italic 700 bold, 900 black // font-family: 'Barlow', sans-serif;-->
+	<link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,700,900" rel="stylesheet"> 
+	
+	<!--FONT awesome-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	
+	<!-- Angular scripts -->	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js"></script>
+	<script src="js/itunes_controller.js"></script>
+	
+</head>
+	
+	
+<body class="home" ng-controller="iTunesController">
+	
+	<!--Nav bar top-->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark" >
+	
+	<a href="index.html" class="gmLogoHome"><img src="img/getMusicLogo.png" alt="Get Media logo" width="96"></a>
+	
+  <!--<a class="navbar-brand" href="#"><img alt="Get Media logo" src="img/getMusicLogo.png"> style="border: 1px solid red"   </a>-->
+	
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+	  
+    <div class="navbar-nav">
+		<a class="btn active" href="index.html">Home</a>
+		<a class="btn" href="iTunes.html">iTunes</a>
+		<a class="btn" href="contactUs.html">Contact Us</a>
+    </div>
+  </div>
+</nav>
+	
+	
+<main class="content" >
+	
+	<div class="container-fluid">
+		
+		<div class="row">
+  			<div class="col-md-6 offset-md-5">
+				
+			<h1 class="home-h1 white shadow">Search your music life with GetMedia</h1>
+				
+			<form name="search" ng-submit="searchiTunes(artist)">
+				<input type="text" class="home" placeholder="Search artist..." ng-model="artist"><button class="searchBtn" type="submit"><i class="fas fa-search"></i></button>
+			</form>	
+				
+			<!-- show an error if there's a search error -->
+				<p><br>
+				{{ error }}</p>
+        	
+				
+				
+				
+				<div class="songWrapper" ng-show="songs">
+					<div class="row songRow" ng-repeat="song in songs">
+						<div class="col-2 flexColCenter">
+							<img class="songImg" ng-src="{{song.artworkUrl60}}" alt="{{song.collectionName}}"/>
+						</div>
+						<div class="col-8 flexColCenter">
+							<p>&nbsp;<a class="songLink" href="{{song.previewUrl}}"><i class="fas fa-play-circle play"></i></a>
+							&nbsp;&nbsp;{{song.trackName}}</p>
+						</div>
+						<div class="col-1 flexColCenter songPrice"><p>{{song.collectionPrice | currency:"£" }}</p></div>
+					<!--end row-->
+				 	</div>
+				<!--end ng-show=songs-->
+				</div>
+				
+				
+				
+		</div>
+			
+	<!--end row-->
+	</div>
+		
+	<!--end container-fluid-->			
+	</div>
+	
+</main>
+	
+	
+<footer>
+		
+<div class="container-fluid">
+		
+	<div class="row">   <!--style="border: 1px dotted red"  mx-md-3 mx-sm-2-->
+		
+
+		<div class="col-12 col-sm-12 col-md-12 col-lg-3">
+			<img src="img/getMusicWhite.png" class="footerGMlogo" alt="Get Music logo">
+			<p class="white"><strong>Get sociable</strong></p>
+			<h3 class="social socialMedia">
+			<i class="fab fa-facebook-square facebook"></i>&nbsp;
+			<i class="fab fa-twitter-square twitter"></i>&nbsp;
+			<i class="fab fa-whatsapp-square whatsapp"></i>&nbsp;
+			<i class="fab fa-snapchat-square snapchat"></i>
+			<!--<i class="fab fa-instagram instagram"></i>--></h3>
+		</div>
+		
+		<div class="col-12 col-sm-12 col-md-6 col-lg-3  d-none d-lg-block" >
+			<p class="white"><strong>Contact us</strong><br>
+			<a class="simpleFooterLink" href="mailto:hello@getmedia.com">hello@getmedia.com</a><br>
+			<a class="simpleFooterLink" href="holdingPage.html">Contact us</a></p>
+		</div>
+		
+		<div class="col-12 col-sm-12 col-md-12 col-lg-3" >
+			<p class="white"><strong>Your data</strong><br>
+			<a class="simpleFooterLink" href="holdingPage.html">Our privacy policy</a><br>
+			<a class="simpleFooterLink" href="holdingPage.html">How we use cookies</a></p>
+		</div>
+		
+		<div class="col-12 col-sm-12 col-md-12 col-lg-3 flexColCenter" >
+			<img src="img/iTunesBuyItWhite.svg" class="footeriTunesWhiteLogo " alt="Buy on the iTunes Store">
+		</div>
+
+		
+	<!--end row-->
+	</div>
+	
+<!--end container-->
+</div>
+		
+		
+</footer>
+	  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.0.0.js"></script>
+	
+
+</body>
+	
+</html>

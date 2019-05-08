@@ -1,0 +1,50 @@
+/* Scss Document _navMenuBootstrap */
+
+
+// ------------------
+// Nav bar background
+// ------------------
+
+.navbar {
+	height: 64px;
+	flex-shrink: 0; //could also use flex: none;
+}
+
+.bg-dark {
+	background-color: $grey70 !important;
+}
+
+.navbar-collapse, .navbar {justify-content:flex-end} //Sets buttons  and collapse button to right
+
+
+
+
+// ------------------
+// Nav bar logo 'Gdot'
+// ------------------
+
+a.gmLogoHome {
+			width: 96px;
+			position: absolute;
+			left: 46px;
+			top: 16px;
+			outline: 0;
+	}
+
+
+button.navbar-toggler {
+	border-radius: 0;
+	border: 0 !important;
+	outline: 0;
+	
+	&:active, &:hover {
+		border: 2px solid $orange;
+		box-shadow: 0 0 6px $orange;
+		-moz-box-shadow: 0 0 6px $orange;
+		-webkit-box-shadow: 0 0 6px $orange;
+	}
+}
+
+
+
+

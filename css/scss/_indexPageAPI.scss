@@ -1,0 +1,43 @@
+/* Scss Document */
+
+.songWrapper {
+	
+	background-color: $white85;
+	margin-top: 50px;
+	padding-top: 15px;
+}
+
+.songRow {
+	
+	margin: 15px;
+	border-bottom: 1px solid $grey50;
+	padding: 5px;
+	
+	
+		&:last-child { //removes margin on first button in group
+			border-bottom: none;
+			padding: 5px 5px 10px 5px;
+		}
+	}
+
+.songImg {
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin: 0 auto 17px auto;
+}
+
+.songPrice {
+	text-align: right; 
+}
+
+a.songLink {
+	color: $grey50;
+	font-size: 1.7rem;
+	vertical-align: middle;
+	
+	&:hover {
+		color: $orange;
+		transition: 0.5s;
+	}
+}

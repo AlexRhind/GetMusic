@@ -1,0 +1,63 @@
+/* Scss Document */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100vh; //IE11 min-height bug clear
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+	flex: 1 0 auto; // sets a child of the body element to expand to fill the v-height (usually main)
+}
+
+footer {
+	flex-shrink: 0;  //no flex-shrink here. Nav also has no flex-shrink
+}
+
+.flexColCenter { //centre child objects in a row
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+
+body.home {//background image of girl **CURRENTLY LO RES**
+	background: url(../img/blueGirlMaxLoRes.jpg)no-repeat top left fixed #487CC5; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+//	background-position: 75% 0;
+//	min-height: 320px;
+
+
+.noPadding {
+	padding: 0 !important;
+}
+
+.twoCol-contactUs {
+	margin-top: 149px;
+}
+
+@include break(991.75) {//removes the pixels boave the 2-col layout
+	
+		.twoCol-contactUs {
+			margin-top: 10px;
+		}
+}
+
+		
+//@include media-breakpoint-down(md) {
+//	
+//  .col2-contactUs {
+//    margin-top: 0;
+//  
+//	}
+//
+//}

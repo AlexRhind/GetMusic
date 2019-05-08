@@ -1,0 +1,19 @@
+/* Scss Document */
+
+/* Base data */
+@import "variables";/* var mixins first */
+@import "mixins"; /*functions*/
+@import "normalise";
+@import "typographyBase";
+
+/* Structural */
+@import "navMenuBootstrap";
+@import "structure";
+@import "buttons";
+@import "footer";
+@import "iTunesPage";
+
+/* Non-structural */
+@import "social";
+@import "forms";
+@import "indexPageAPI";

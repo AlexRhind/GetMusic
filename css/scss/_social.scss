@@ -1,0 +1,35 @@
+/* Scss Document */
+
+.social {
+	color: $white;
+	cursor: pointer;
+
+	.facebook:hover {
+		color: #0F60BD;
+		transition: 0.7s;
+		}
+	
+	.twitter:hover {
+		color: #21B5EE;
+		transition: 0.7s;
+
+		}
+	
+	.whatsapp:hover {
+		color: #57A757;
+		transition: 0.7s;
+	}
+	
+	.instagram:hover {
+		color: #E13D62;
+		transition: 0.7s;
+
+		}
+	
+	.snapchat:hover {
+		color: #FFD400;
+		transition: 0.7s;
+
+		}
+	
+}

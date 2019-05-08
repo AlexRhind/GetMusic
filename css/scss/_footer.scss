@@ -1,0 +1,53 @@
+/* Scss Document */
+
+footer {
+	background-color: $blue;
+	margin-top: 20px;
+	min-height: 120px;
+}
+
+a.simpleFooterLink {
+	color: $white;
+	
+		&:hover {
+			opacity: 0.7;
+			transition: 0.7s;
+			text-decoration: underline;
+		}
+}
+
+
+.social {
+	color: $white;
+	cursor: pointer;
+	font-size: 2rem;
+
+	.facebook:hover {
+		color: #0F60BD;
+		transition: 0.7s;
+		}
+	
+	.twitter:hover {
+		color: #21B5EE;
+		transition: 0.7s;
+
+		}
+	
+	.whatsapp:hover {
+		color: #57A757;
+		transition: 0.7s;
+	}
+	
+	.instagram:hover {
+		color: #E13D62;
+		transition: 0.7s;
+
+		}
+	
+	.snapchat:hover {
+		color: #FFD400;
+		transition: 0.7s;
+
+		}
+	
+}

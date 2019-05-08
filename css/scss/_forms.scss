@@ -1,0 +1,143 @@
+/* Scss Document */
+
+//Styles form entry boxes and active outline (focus), rendered in grey50%
+//See buttons page for buttons
+
+@mixin formElements {
+	
+		background: $white; 
+		padding: 15px;
+		height: 50px !important;
+		outline: 0;
+		border-radius: 0;
+		border: 1px solid $grey50;
+	
+		&:focus {
+				border: 2px solid $orange50;
+				box-shadow: 0 0 6px $orange50;
+				-moz-box-shadow: 0 0 6px $orange50;
+				-webkit-box-shadow: 0 0 6px $orange50;
+		}
+}
+
+//-------------
+//Home page
+//-------------
+
+
+input[type=text].home {
+	
+			@include formElements;
+				
+			width: 80%;
+			background: rgba($white, 0.75); 
+			border-radius: 25px;
+	
+		}
+
+
+//-------------
+//Contact us page
+//-------------
+
+
+input.number, input[type=text], input[type=email], input[type=number] {
+	
+			@include formElements; 
+	
+		}
+
+input[type=checkbox] {
+	
+			background: white;
+			margin-top: 11px;
+			border: 1px solid $grey50;
+	
+		}
+	
+select.form-control { 
+
+			@include formElements; 
+			margin-top: 40px;
+}
+
+textarea.form-control { 
+
+			@include formElements; 
+			height: 200px !important;
+}
+
+
+//-------------
+//Custom checkbox
+//-------------
+
+/* Customize the label (the containerCheckBox) */
+.containerCheckBox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin: 30px 0 25px 0;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerCheckBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: $white;
+  border: 1px solid $grey50;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheckBox:hover input ~ .checkmark {
+  background-color: $white;
+}
+
+/* When the checkbox is checked, add an orange background */
+.containerCheckBox input:checked ~ .checkmark {
+  	background-color: $orange;
+	border: 1px solid $white;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheckBox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckBox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

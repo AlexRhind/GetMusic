@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Product Page Template</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+	
+	<link href="css/getMusic.css" rel="stylesheet">
+	
+	<!-- Google FONT - Barlow 400 regular, 400i reg italic 700 bold, 900 black // font-family: 'Barlow', sans-serif;-->
+	<link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,700,900" rel="stylesheet"> 
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	
+</head>
+	
+	
+<body class="">
+	
+<!--Nav bar top-->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark" >
+	
+	<a href="index.html" class="gmLogoHome"><img src="img/getMusicLogo.png" alt="Get Media logo" width="96"></a>
+
+	
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon navbar-dark"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	  
+    <div class="navbar-nav">
+		<a class="btn" href="index.html">Home</a>
+		<a class="btn active" href="iTunes.html">iTunes</a>
+		<a class="btn" href="contactUs.html">Contact Us</a>
+    </div>
+  </div>
+<!--End nav bar-->
+</nav>
+	
+	
+<main  class="content">
+	
+	<div class="container-fluid contactUsForm" ng-app="mainApp" ng-controller = "voucherController">
+		
+	<form>
+		<div class="row mx-md-5 mx-sm-4 align-items-end">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1">
+				<h1 class="contactUs-h1">Get iTunes vouchers</h1></div>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1 iTunesImgDiv">
+				<img alt="iTunes vouchers" src="img/iTunesVouchersROUGH.png" class="iTunesImg img-fluid"></div>
+		
+		<!--1stRowEnd-->
+		</div>
+
+		
+		<div class="row mx-md-5 mx-sm-4 "><!--2ndRowStart | change the size of the row margins to accomodate the screen size-->
+  			<div class="col-12 col-sm-12 col-md-12 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1" >
+				  <div class="form-group">
+					<label for="formControlInput4"><strong>Your name</strong></label>
+					<input type="text" class="form-control" ng-model="purchase.name" placeholder="Your name" required>
+				  </div>
+					
+				  <div class="form-group">
+					<label for="formControlInput5"><strong>your email</strong></label>
+					<input type="email" class="form-control" ng-model="purchase.email" placeholder="name@example.com" required>
+				  </div>
+					
+				  <div class="form-group">
+					<label for="formControlInput6"><strong>Your telephone number</strong></label>
+					  
+					 <!--type="number" clips the first 0 off the number so ng-pattern regEx is used instead for validation-->
+					<input ng-pattern="/^[0-9\s]*$/" class="form-control number" ng-model="purchase.telephone" placeholder="Optional">
+				  </div>
+					
+				<label class="containerCheckBox"><p><strong>This is a gift</strong>&nbsp;&nbsp;I would like to send these vouchers to someone else</p>
+				  <input type="checkbox" >
+				  <span class="checkmark"></span>
+				</label>
+				
+				
+	
+					<div class="form-group">
+					<label for="formControlInput7"><strong>Gift recipient's name</strong></label>
+					<input type="text" class="form-control" ng-model="gift.name" placeholder="Your name">
+				  </div>
+
+				  <div class="form-group">
+					<label for="formControlInput8"><strong>Gift recipient's email</strong></label>
+					<input type="email" class="form-control" ng-model="gift.email" placeholder="name@example.com">
+				  </div>
+
+
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1"><strong>Message to recipient...</strong></label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="4" ng-model="gift.message" max="200" placeholder="Optional. Max 200 ch"></textarea>
+				</div>
+
+										
+			</div>
+			
+			
+  			<div class="col-12 col-sm-12 col-md-12 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1">
+				
+				<div class="bottomRule">  <!--style="border: 1px solid red"-->
+					<h3 class="voucher-h3">iTunes vouchers</h3>
+					<p>Redeemable in the UK only</p>
+				</div>
+				
+				<div class="row"><!--Nested vouchers row start-->
+					
+					<div class="voucherPrice no-gutters col-4">
+						<h2 class="voucher-h2">£5</h2>
+						<input type="number" class="form-control" ng-model="purchase.five" placeholder="Quantity">
+					</div>
+
+					<div class="voucherPrice no-gutters col-4">
+						<h2 class="voucher-h2">£10</h2>
+						<input type="number" class="form-control" ng-model="purchase.ten" placeholder="Quantity">
+					</div>
+
+					<div class="voucherPrice no-gutters col-4">
+						<h2 class="voucher-h2">£15</h2>
+						<input type="number" class="form-control" ng-model="purchase.fifteen" placeholder="Quantity">
+					</div>
+					
+				<!--end vouchers row-->
+				</div>
+				
+				<label class="containerCheckBox"><p><strong>Yes please!</strong>&nbsp;&nbsp;Check the box if you would like to receive the latest Get Media offers by email</p>
+				  <input type="checkbox" id="yesEmail">
+				  <span class="checkmark"></span>
+				</label>
+				
+				
+				<p><button class="btn formBtn" type="submit">Purchase</button>
+				<!--<button class="btn resetBtn" type="reset">Reset</button>-->
+				</p>
+			
+				
+				
+				<div class="screenOutput">
+					<h3>Your order</h3>
+					<p><strong>Name</strong>&nbsp;&nbsp;{{purchase.name}}<br>
+					<strong>Email</strong>&nbsp;&nbsp;{{purchase.email}}<br>
+					<strong>Telephone</strong>&nbsp;&nbsp;{{purchase.telephone}}</p>
+
+					<p><strong>Total value of vouchers:</strong>&nbsp;&nbsp;{{purchase.cost() | currency:"£"}}</p>
+
+					<p><strong>Gift recipient's name</strong> optional&nbsp;&nbsp;{{gift.name}}<br>
+					<strong>Gift recipient's email</strong> optional&nbsp;&nbsp;{{gift.email}}<br>
+					<strong>Gift recipient's message</strong> optional&nbsp;&nbsp;{{gift.message}}</p>
+				
+				<!--end screenOutput-->
+				</div>
+				
+		<!--end 2ndRowDiv-->
+		</div>
+			
+		<!--end row-->
+		</div>
+		
+		</form>
+		<!--end container-->
+		</div>
+
+<!--end voucher order form-->
+</main>
+	
+	
+	
+<footer>
+		
+<div class="container-fluid">
+		
+	<div class="row">   <!--style="border: 1px dotted red"  mx-md-3 mx-sm-2-->
+		
+
+		<div class="col-12 col-sm-12 col-md-12 col-lg-3">
+			<img src="img/getMusicWhite.png" class="footerGMlogo" alt="Get Music logo">
+			<p class="white"><strong>Get sociable</strong></p>
+			<h3 class="social socialMedia">
+			<i class="fab fa-facebook-square facebook"></i>&nbsp;
+			<i class="fab fa-twitter-square twitter"></i>&nbsp;
+			<i class="fab fa-whatsapp-square whatsapp"></i>&nbsp;
+			<i class="fab fa-snapchat-square snapchat"></i>
+			<!--<i class="fab fa-instagram instagram"></i>--></h3>
+		</div>
+		
+		<div class="col-12 col-sm-12 col-md-6 col-lg-3  d-none d-lg-block" >
+			<p class="white"><strong>Contact us</strong><br>
+			<a class="simpleFooterLink" href="mailto:hello@getmedia.com">hello@getmedia.com</a><br>
+			<a class="simpleFooterLink" href="holdingPage.html">Contact us</a></p>
+		</div>
+		
+		<div class="col-12 col-sm-12 col-md-12 col-lg-3" >
+			<p class="white"><strong>Your data</strong><br>
+			<a class="simpleFooterLink" href="holdingPage.html">Our privacy policy</a><br>
+			<a class="simpleFooterLink" href="holdingPage.html">How we use cookies</a></p>
+		</div>
+		
+		<div class="col-12 col-sm-12 col-md-12 col-lg-3 flexColCenter" >
+			<img src="img/iTunesBuyItWhite.svg" class="footeriTunesWhiteLogo " alt="Buy on the iTunes Store">
+		</div>
+
+		
+	<!--end row-->
+	</div>
+	
+<!--end container-->
+</div>
+		
+		
+</footer>
+	
+
+
+	  
+	  
+    <!-- Angular | https://stackoverflow.com/questions/24867578/multiple-apps-and-controllers-in-the-same-file/24867989#24867989 if manual initilisation(bootstrapping) of another app is needed-->
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>	
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.0.0.js"></script>
+	
+	<!-- Angular scripting -->
+	<script type="text/javascript" src="js/voucherController.js"></script>
+
+
+</body>
+	
+</html>

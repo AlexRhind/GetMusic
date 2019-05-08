@@ -1,0 +1,55 @@
+/* Scss Document */
+$orange: #FF9133;
+$orange50: rgba($orange, 0.5);
+
+$grey: #363636; 
+$grey50: rgba($grey, 0.5); 
+$grey70: rgba($grey, 0.7); 
+
+$midGrey: #999999;
+
+$lightGrey: #DDDDDD;
+
+$body: #7C7C7C;
+
+$white: #ffffff;
+$white50: rgba($white, 0.50); 
+$white85: rgba($white, 0.85); 
+
+
+
+$dottedBorder: 1px dotted $grey;
+
+
+//Google FONT - Barlow 400 regular, 400i reg italic 700 bold, 900 black 
+$primaryFont: 'Barlow', sans-serif; 
+
+
+
+//2018 figures
+
+
+$grid-columns:      12;
+$grid-gutter-width: 20px !important;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+$customCheckContainer-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+

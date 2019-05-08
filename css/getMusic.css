@@ -1,0 +1,817 @@
+/* Scss Document */
+/* Base data */
+/* Scss Document */
+/* var mixins first */
+/* Scss Document */
+/*functions*/
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Alex Edit - border box for content
+   ========================================================================== */
+/*   ========================================================================== */
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/* Scss Document */
+html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+  widows: inherit;
+  /*kern and ligature set*/
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  -webkit-font-smoothing: antialiased; }
+
+p, h1, h3, h5, h6 {
+  font: 400 "Barlow", sans-serif;
+  color: #363636; }
+
+li, ul {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  text-decoration: none; }
+
+label {
+  font-size: 1rem;
+  margin: 0.3rem 0 0.3rem 10px; }
+
+p {
+  font: 400 1rem/1.5rem "Barlow", sans-serif; }
+
+.home-h1 {
+  font: 900 3.5rem/3.8rem "Barlow", sans-serif;
+  letter-spacing: -0.1px;
+  word-spacing: 0.02em;
+  color: #7C7C7C;
+  margin-top: 33%;
+  margin-right: 0;
+  margin-bottom: 50px;
+  margin-left: 5px; }
+
+.contactUs-h1 {
+  font: 900 3.5rem/3.8rem "Barlow", sans-serif;
+  letter-spacing: -0.1px;
+  word-spacing: 0.02em;
+  color: #7C7C7C;
+  margin-top: 72px;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0; }
+
+h2 {
+  font: 400 2.5rem/2.4rem "Barlow", sans-serif;
+  letter-spacing: -1.0px;
+  word-spacing: 0.1em; }
+  h2.voucher-h2 {
+    margin: 1rem 0 0.7rem 0;
+    text-align: center;
+    color: rgba(54, 54, 54, 0.7); }
+
+h3 {
+  font: 400 1.5rem/2.4rem "Barlow", sans-serif;
+  letter-spacing: -1.0px;
+  word-spacing: 0.1em; }
+  h3.voucher-h3 {
+    margin: 1.3rem 0 0.2rem 0; }
+
+h3 div.voucherPrice {
+  text-align: center; }
+
+h4 {
+  font: 700 1.2rem/1.6rem "Barlow", sans-serif;
+  color: #363636; }
+
+strong {
+  font-weight: 700; }
+
+.medium {
+  font-weight: 700 !important; }
+
+.white {
+  color: #ffffff !important; }
+
+.shadow {
+  text-shadow: 0px 6px 10px rgba(54, 54, 54, 0.5); }
+
+/* Structural */
+/* Scss Document _navMenuBootstrap */
+.navbar {
+  height: 64px;
+  flex-shrink: 0; }
+
+.bg-dark {
+  background-color: rgba(54, 54, 54, 0.7) !important; }
+
+.navbar-collapse, .navbar {
+  justify-content: flex-end; }
+
+a.gmLogoHome {
+  width: 96px;
+  position: absolute;
+  left: 46px;
+  top: 16px;
+  outline: 0; }
+
+button.navbar-toggler {
+  border-radius: 0;
+  border: 0 !important;
+  outline: 0; }
+  button.navbar-toggler:active, button.navbar-toggler:hover {
+    border: 2px solid #FF9133;
+    box-shadow: 0 0 6px #FF9133;
+    -moz-box-shadow: 0 0 6px #FF9133;
+    -webkit-box-shadow: 0 0 6px #FF9133; }
+
+/* Scss Document */
+html {
+  height: 100%; }
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.content {
+  flex: 1 0 auto; }
+
+footer {
+  flex-shrink: 0; }
+
+.flexColCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+body.home {
+  background: url(../img/blueGirlMaxLoRes.jpg) no-repeat top left fixed #487CC5;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.noPadding {
+  padding: 0 !important; }
+
+.twoCol-contactUs {
+  margin-top: 149px; }
+
+@media screen and (max-width: 991.75px) {
+  .twoCol-contactUs {
+    margin-top: 10px; } }
+/* Scss Document */
+.btn {
+  background-color: rgba(54, 54, 54, 0.1);
+  color: #ffffff;
+  vertical-align: middle;
+  font-weight: 700;
+  padding: 4px 0 0 0;
+  border: 1px solid #ffffff;
+  font-size: 0.9rem;
+  border-radius: 19px;
+  width: 114px;
+  height: 31px;
+  outline: none;
+  margin: auto 15px; }
+  .btn:first-child {
+    margin-left: 0; }
+  .btn:focus {
+    border: 2px solid rgba(255, 145, 51, 0.5);
+    box-shadow: 0 0 4px rgba(255, 145, 51, 0.5);
+    -moz-box-shadow: 0 0 4px rgba(255, 145, 51, 0.5);
+    -webkit-box-shadow: 0 0 4px rgba(255, 145, 51, 0.5); }
+  .btn:hover {
+    background-color: #FF9133;
+    color: #ffffff;
+    border: 1px solid #FF9133; }
+  .btn.active {
+    background-color: #FF9133;
+    color: #ffffff;
+    border: 1px solid #FF9133; }
+
+@media screen and (max-width: 991.75px) {
+  .btn {
+    background-color: rgba(54, 54, 54, 0.5);
+    display: block;
+    color: white;
+    vertical-align: middle;
+    font-weight: 400;
+    padding: 15px 0 0 0;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    font-size: 1.2rem;
+    border-radius: 0px;
+    width: 100%;
+    height: 56px;
+    outline: none;
+    margin: 0; }
+    .btn:first-child {
+      margin-top: 19px; }
+    .btn:focus {
+      border: 2px solid rgba(255, 145, 51, 0.5);
+      box-shadow: 0 0 4px rgba(255, 145, 51, 0.5);
+      -moz-box-shadow: 0 0 4px rgba(255, 145, 51, 0.5);
+      -webkit-box-shadow: 0 0 4px rgba(255, 145, 51, 0.5); }
+    .btn:hover {
+      background-color: rgba(54, 54, 54, 0.7);
+      color: #ffffff;
+      border: none;
+      border-bottom: 1px solid #ffffff; }
+    .btn.active {
+      background-color: #FF9133;
+      border: 1px solid rgba(255, 145, 51, 0.5);
+      border-bottom: 1px solid #ffffff;
+      color: #ffffff; }
+    .btn:last-child {
+      border-bottom: none; } }
+.searchBtn {
+  background-color: #FF9133;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding: 0 0 0 0;
+  margin: 0 0 4px -50px;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  outline: 0; }
+  .searchBtn:focus {
+    outline: 0;
+    border: 1px solid #FF9133;
+    box-shadow: 0 0 6px 3px rgba(54, 54, 54, 0.5);
+    -moz-box-shadow: 0 0 6px 3px rgba(54, 54, 54, 0.5);
+    -webkit-box-shadow: 0 0 6px 3px rgba(54, 54, 54, 0.5); }
+  .searchBtn:hover {
+    color: rgba(255, 255, 255, 0.5); }
+
+.btn.formBtn {
+  background-color: #FF9133;
+  color: #ffffff;
+  vertical-align: middle;
+  font-weight: 700;
+  padding: 1px 0 0 0;
+  font-size: 0.9rem;
+  border-radius: 19px;
+  width: 130px;
+  height: 38px;
+  outline: 0;
+  margin: auto 15px auto 0; }
+  .btn.formBtn:focus {
+    border: 2px solid rgba(255, 145, 51, 0.5);
+    box-shadow: 0 0 4px rgba(255, 145, 51, 0.5);
+    -moz-box-shadow: 0 0 4px rgba(255, 145, 51, 0.5);
+    -webkit-box-shadow: 0 0 4px rgba(255, 145, 51, 0.5); }
+  .btn.formBtn:hover {
+    background-color: rgba(54, 54, 54, 0.5);
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 6px #FF9133;
+    -moz-box-shadow: 0 0 6px #FF9133;
+    -webkit-box-shadow: 0 0 6px #FF9133; }
+
+.btn.resetBtn {
+  background-color: #FF9133;
+  color: #ffffff;
+  vertical-align: middle;
+  font-weight: 700;
+  padding: 1px 0 0 0;
+  font-size: 0.9rem;
+  border-radius: 19px;
+  width: 130px;
+  height: 38px;
+  outline: 0;
+  margin: auto 15px auto 0;
+  border: 1px solid rgba(54, 54, 54, 0.5);
+  background-color: #ffffff;
+  color: rgba(54, 54, 54, 0.5); }
+  .btn.resetBtn:focus {
+    border: 2px solid rgba(255, 145, 51, 0.5);
+    box-shadow: 0 0 4px rgba(255, 145, 51, 0.5);
+    -moz-box-shadow: 0 0 4px rgba(255, 145, 51, 0.5);
+    -webkit-box-shadow: 0 0 4px rgba(255, 145, 51, 0.5); }
+  .btn.resetBtn:hover {
+    background-color: rgba(54, 54, 54, 0.5);
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 6px #FF9133;
+    -moz-box-shadow: 0 0 6px #FF9133;
+    -webkit-box-shadow: 0 0 6px #FF9133; }
+  .btn.resetBtn:hover {
+    background-color: rgba(54, 54, 54, 0.5);
+    border: 1px solid #ffffff; }
+
+/* Scss Document */
+footer {
+  background-color: #363636;
+  padding: 10px 0;
+  margin-top: 20px;
+  min-height: 90px; }
+
+.footerGMlogo {
+  width: 56px;
+  float: left;
+  margin: 10px 30px 0 0; }
+
+.footeriTunesWhiteLogo {
+  width: 160px; }
+
+a.simpleFooterLink {
+  color: #ffffff;
+  text-decoration: underline; }
+  a.simpleFooterLink:hover {
+    opacity: 0.5;
+    transition: 0.7s; }
+
+/* Scss Document */
+.iTunesImgDiv {
+  justify-content: center; }
+
+.iTunesImg {
+  height: 85px;
+  margin: 0px auto 20px auto;
+  display: block; }
+
+.bottomRule {
+  border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+  margin-bottom: 10px; }
+
+.screenOutput {
+  border: 1px dotted rgba(54, 54, 54, 0.5);
+  padding: 10px 10px 10px 20px;
+  margin-top: 30px; }
+
+/* Non-structural */
+/* Scss Document */
+.social {
+  color: #ffffff;
+  cursor: pointer; }
+  .social .facebook:hover {
+    color: #0F60BD;
+    transition: 0.7s; }
+  .social .twitter:hover {
+    color: #21B5EE;
+    transition: 0.7s; }
+  .social .whatsapp:hover {
+    color: #57A757;
+    transition: 0.7s; }
+  .social .instagram:hover {
+    color: #E13D62;
+    transition: 0.7s; }
+  .social .snapchat:hover {
+    color: #FFD400;
+    transition: 0.7s; }
+
+/* Scss Document */
+input[type=text].home {
+  background: #ffffff;
+  padding: 15px;
+  height: 50px !important;
+  outline: 0;
+  border-radius: 0;
+  border: 1px solid rgba(54, 54, 54, 0.5);
+  width: 80%;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 25px; }
+  input[type=text].home:focus {
+    border: 2px solid rgba(255, 145, 51, 0.5);
+    box-shadow: 0 0 6px rgba(255, 145, 51, 0.5);
+    -moz-box-shadow: 0 0 6px rgba(255, 145, 51, 0.5);
+    -webkit-box-shadow: 0 0 6px rgba(255, 145, 51, 0.5); }
+
+input.number, input[type=text], input[type=email], input[type=number] {
+  background: #ffffff;
+  padding: 15px;
+  height: 50px !important;
+  outline: 0;
+  border-radius: 0;
+  border: 1px solid rgba(54, 54, 54, 0.5); }
+  input.number:focus, input[type=text]:focus, input[type=email]:focus, input[type=number]:focus {
+    border: 2px solid rgba(255, 145, 51, 0.5);
+    box-shadow: 0 0 6px rgba(255, 145, 51, 0.5);
+    -moz-box-shadow: 0 0 6px rgba(255, 145, 51, 0.5);
+    -webkit-box-shadow: 0 0 6px rgba(255, 145, 51, 0.5); }
+
+input[type=checkbox] {
+  background: white;
+  margin-top: 11px;
+  border: 1px solid rgba(54, 54, 54, 0.5); }
+
+select.form-control {
+  background: #ffffff;
+  padding: 15px;
+  height: 50px !important;
+  outline: 0;
+  border-radius: 0;
+  border: 1px solid rgba(54, 54, 54, 0.5);
+  margin-top: 40px; }
+  select.form-control:focus {
+    border: 2px solid rgba(255, 145, 51, 0.5);
+    box-shadow: 0 0 6px rgba(255, 145, 51, 0.5);
+    -moz-box-shadow: 0 0 6px rgba(255, 145, 51, 0.5);
+    -webkit-box-shadow: 0 0 6px rgba(255, 145, 51, 0.5); }
+
+textarea.form-control {
+  background: #ffffff;
+  padding: 15px;
+  height: 50px !important;
+  outline: 0;
+  border-radius: 0;
+  border: 1px solid rgba(54, 54, 54, 0.5);
+  height: 200px !important; }
+  textarea.form-control:focus {
+    border: 2px solid rgba(255, 145, 51, 0.5);
+    box-shadow: 0 0 6px rgba(255, 145, 51, 0.5);
+    -moz-box-shadow: 0 0 6px rgba(255, 145, 51, 0.5);
+    -webkit-box-shadow: 0 0 6px rgba(255, 145, 51, 0.5); }
+
+/* Customize the label (the containerCheckBox) */
+.containerCheckBox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin: 30px 0 25px 0;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* Hide the browser's default checkbox */
+.containerCheckBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border: 1px solid rgba(54, 54, 54, 0.5); }
+
+/* On mouse-over, add a grey background color */
+.containerCheckBox:hover input ~ .checkmark {
+  background-color: #ffffff; }
+
+/* When the checkbox is checked, add an orange background */
+.containerCheckBox input:checked ~ .checkmark {
+  background-color: #FF9133;
+  border: 1px solid #ffffff; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.containerCheckBox input:checked ~ .checkmark:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.containerCheckBox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+/* Scss Document */
+.songWrapper {
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-top: 50px;
+  padding-top: 15px; }
+
+.songRow {
+  margin: 15px;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+  padding: 5px; }
+  .songRow:last-child {
+    border-bottom: none;
+    padding: 5px 5px 10px 5px; }
+
+.songImg {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto 17px auto; }
+
+.songPrice {
+  text-align: right; }
+
+a.songLink {
+  color: rgba(54, 54, 54, 0.5);
+  font-size: 1.7rem;
+  vertical-align: middle; }
+  a.songLink:hover {
+    color: #FF9133;
+    transition: 0.5s; }

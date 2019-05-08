@@ -1,0 +1,111 @@
+/* Scss Document */
+
+
+
+
+html {height: 100%}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: $primaryFont; ///Google FONT - Barlow 400 regular, 400i reg italic 700 bold, 900 black
+	
+	widows: inherit;/*kern and ligature set*/
+	//hanging-punctuation: none || [ first || [ force-end | allow-end ] || last ];
+	font-kerning: normal;
+	text-rendering: optimizeLegibility;
+	font-variant-ligatures: common-ligatures;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+p, h1, h3, h5, h6 { 
+	font: 400 $primaryFont;
+	color: $grey;
+}
+
+
+li, ul {
+	font-size: 1rem;
+	margin: 0.3rem 0;
+	text-decoration: none;
+}
+
+label {
+	font-size: 1rem;
+	margin: 0.3rem 0 0.3rem 10px; //10px left indent for labels
+}
+
+p { font: 400 1rem/1.5rem $primaryFont; }
+
+
+
+
+@mixin h1($m-top, $m-right, $m-bottom, $m-left) {
+	font: 900 3.5rem/3.8rem $primaryFont;
+	letter-spacing: -0.1px;
+	word-spacing: 0.02em;
+	color: $body;
+	margin-top: $m-top;
+	margin-right: $m-right;
+	margin-bottom: $m-bottom;
+	margin-left: $m-left;
+}
+
+.home-h1 {
+	@include h1(33%, 0, 50px, 5px)
+}
+
+.contactUs-h1 {
+	@include h1(72px, 0, 10px, 0)
+}
+
+
+ h2 {   
+	font: 400 2.5rem/2.4rem $primaryFont;
+	letter-spacing: -1.0px;
+	word-spacing: 0.1em;
+	 
+	&.voucher-h2 {
+		margin: 1rem 0 0.7rem 0;
+		text-align: center;
+		color: $grey70;
+	 }
+	 
+}
+
+ h3 {   
+	font: 400 1.5rem/2.4rem $primaryFont;
+	letter-spacing: -1.0px;
+	word-spacing: 0.1em;
+	 
+	 	&.voucher-h3 {
+			margin: 1.3rem 0 0.2rem 0;
+	 }
+	 
+
+	 
+}
+
+
+h3 div.voucherPrice {
+	text-align: center;
+}
+
+h4 {
+	font: 700 1.2rem/1.6rem $primaryFont;
+	color: $grey;
+}
+
+
+strong {
+	font-weight: 700;
+}
+
+.medium {font-weight: 700 !important}
+
+.white {color: $white !important}
+	
+.shadow {text-shadow: 0px 6px 10px $grey50}
+
+
